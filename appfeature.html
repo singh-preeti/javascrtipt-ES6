@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <!-- const ,let and var  -->
+
+    <head>
+        <script> 
+           const name = 'Preeti';
+           console.log(name);
+
+           name = 'Rahul';
+           console.log(name);
+           // typeerror: invalid assignment to const name
+
+           const person = {
+            name : 'Rahul',
+            age : 22,
+            isPlaced: true
+           };
+           console.log(person.name); // Rahul
+
+           person.name = 'Rangnath';
+
+           console.log(person.name); // Rangnath
+
+         let Name = 'Rahul';
+         console.log(name);
+
+         Name = 'Rangnath';
+         console.log(name)
+   
+         let bike = {
+            name : 'Royal enfield',
+            engine: '9988cc',
+            type: 'petrol'
+         }
+
+         console.log(bike.engine); // 9988cc
+        
+        bike.engine = '7899 cc';
+        console.log(bike.engine); //7899cc
+
+
+        function printName(name){
+          console.log('good morning!' +name);  
+        }
+        printName('Rangnath');
+
+
+       const printName = name => {
+        return `Good morning ${name}`;
+       }
+       console.log(printName('Rajakumar'));
+
+       const printName1 = name => `Hi ${name}`;
+       console.log(printName1('Rajakumar'));// Hi Rajakumar
+
+
+       var fname = 'student';
+       console.log('my name is '+fname);
+
+       const fname1 = 'student';
+       console.log(`my name is ${fname1}`)
+
+       // object and array destructing(unpack the array object into the group of variable)
+      //Es5
+       const college = {
+        cname : 'Thakur college',
+        isPrivate: true,
+        established: '1989'
+       };
+         let cname = college.cname;
+         let isPrivate = college.isPrivate;
+         let established = college.established;
+
+         console.log(cname) //Thakur college
+         console.log(isPrivate)// true
+         console.log(established)//1989
+
+     // ES6
+         const college1 = {
+        collegename : 'Thakur college',
+        cisPrivate: true,
+        cestablished: '1989'
+       };
+         let{collegename,cestablished,cisPrivate} = college1
+         console.log(cname) //Thakur college
+         console.log(isPrivate)// true
+         console.log(established)//1989
+
+
+         //Array destructing..
+         const arr = ['Rajakumar','rangnath','akhil','rinky'];
+         
+         let[value1,value2,value3,value4] = arr;
+
+         console.log(value1);//Rajakumar
+         console.log(value2);
+         console.log(value3);
+         console.log(value4);
+ 
+          //default parameter
+          //ES5
+          function add(a,b){
+            return a+b;
+          }
+          console.log(add(2,1));
+          console.log(add(2)); // NaN (2 + undefined is Nan(not a number))
+
+          //Es5 improved 
+          function add(a,b){
+          b= (typeof b!=='undefined')?b:1
+            return a+b;
+          }
+          console.log(add(2,1));
+          console.log(add(2)); 
+
+
+          // Rest parameter 
+          // simple function
+          function fun(a,b)
+          {
+            return a+b;
+          }
+          console.log(fun(1,3));//4
+          console.log(fun(3,4,5,6,7,2,));//7
+      
+         //Es6 rest parameter
+         function fun1(...text){
+            let sum = 0;
+            for (let i of text)
+            {
+                sum+=i;
+            }
+            return sum;
+         }
+         console.log(fun1(1,2)) // 3
+         console.log(fun1(1,2,3))//6
+         console.log(fun1(1,2,5,7,2))//17
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </head>
+</html>

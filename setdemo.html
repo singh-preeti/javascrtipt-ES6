@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <p id="p1"></p>
+        <script>
+           
+            //create a set
+            const letters = new Set(["a","b","c","b"]);
+            //list all entries
+            const loops =letters.entries();
+            let text = "";
+             for(const i of loops )
+             {
+                text += i +"<br>"
+             }
+
+            document.getElementById("p1").innerHTML = text;
+        </script>
+    </head>
+</html>

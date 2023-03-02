@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body> 
+        <h2>Window Object's inbuilt methods</h2>
+        <p id="p1"></p>
+        <script>
+            const methods = ["alert", "prompt", "confirm", "setTimeout", "open","close"];
+
+            let text = "";
+
+            for (let i = 0; i< methods.length; i++)
+            {
+                text +=methods[i] + "<br>"
+            }
+
+            
+            document.getElementById("p1").innerHTML = text;
+        </script>
+    </body>
+</html>

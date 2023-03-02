@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>First javascript code</title>
+        <style>
+            .main{
+                color: blue;
+            }
+        </style>
+        <script>
+function sample()
+{
+    var a = document.getElementById("t1").value;
+    var b = document.getElementById("t2").value
+    //alert("welcome" +a)
+    var c = parseInt(a)
+    var d = parseInt(b)
+
+    var e = a+b;
+    document.getElementById("p1").innerHTML = "Welcome to this page"  +e;
+}
+        </script>
+    </head>
+    <body class="main">
+        Enter First Number <input type="text" id="t1">
+        <br>
+        <br>
+        Enter Second Number <input type="text" id="t2">
+        <p id="p1"></p>
+        <input type="button" id="b1" value="submit" onclick="sample()">
+    </body>
+</html>
